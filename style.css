@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 /* --------------- form -------------------- */
 .create_form input[type="text"] {
     margin-top: 10px;
@@ -22,7 +25,7 @@ input[type="submit"] {
     padding: 8px;
     border: none;
     border-radius: 4px;
-    background-color: #4cbd9b;
+    background-color: #f6a524;
     color: #fff;
     font-weight: bold;
     appearance: none;
@@ -43,6 +46,7 @@ input[type="submit"]:focus {
 /* --------------- form -------------------- */
 
 .bg {
+    display: none;
     background-color: #000;
     opacity: 0.5;
     position: fixed;
@@ -53,7 +57,7 @@ input[type="submit"]:focus {
 }
 
 .create {
-    /* display: none; */
+    display: none;
     background-color: #fff;
     padding: 40px;
     color: #000;
@@ -63,18 +67,20 @@ input[type="submit"]:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 10px;
     z-index: 1;
 }
 .create h1 {
     background-color: #4cbd9b;
     color: #fff;
+    border-radius: 8px;
 }
-.createToDo {
+.createToDoBtn {
     display: inline-block;
     font-size: 30px;
     padding: 10px 20px;
     border-radius: 100px;
-    background-color: #4cbd9b;
+    background-color: #f6a524;
     color: #fff;
     position: fixed;
     bottom: 10%;
@@ -107,7 +113,7 @@ main {
 }
 h1 {
     margin-top: 0px;
-    padding: 8px;
+    padding: 16px;
 }
 .todos {
     height: 90vh;

@@ -12,12 +12,12 @@
 <body>
     <div class="create">
         <h1>ToDoを入力</h1>
-        <form method="post" class='create_form'>
+        <form id="form" class='create_form'>
             <input type="text" name="todo">
             <input type="submit" value="追加">
         </form>
     </div>
-    <div class="bg"></div>
+    <div class="bg" onclick="hideCreateModal()"></div>
     <main>
         <div class="todos">
             <h1>ToDo</h1>
@@ -32,7 +32,7 @@
             </ul>
         </div>
     </main>
-    <button class="createToDo" onclick="clicked()">ToDoを作成</button>
+    <button class="createToDoBtn" onclick="showCreateModal()">ToDoを作成</button>
 
     <script src="main.js"></script>
 </body>
