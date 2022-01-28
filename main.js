@@ -18,14 +18,26 @@ function hideCreateModal() {
     createBtn[0].style.display = 'block';
 }
 
-function submit(){
+function save(){
     const inputVal = document.getElementsByName('todo');
     const value = inputVal[0].value;
-    const todoList = document.getElementsByClassName('todos_list');
-    const todoItem = document.createElement("li");
-    todoItem.setAttribute('class','todos_item');
-    todoItem.innerText = value;
-    todoList[0].appendChild(todoItem);
+    localStorage.setItem(localStorage.length,value);
 }
 
-form.addEventListener('submit',submit);
+function showToDo(){
+    for (let i = 0; i < localStorage.length; i++) {
+        const item = localStorage.getItem(i);
+        const todoList = document.getElementsByClassName('todos_list');
+        const todoItem = document.createElement("li");
+        todoItem.setAttribute('class','todos_item');
+        todoItem.innerText = item;
+        todoList[0].appendChild(todoItem);
+    }
+}
+
+
+form.addEventListener('submit',save);
+
+window.addEventListener('load',()=>{
+    showToDo();
+});
