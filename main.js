@@ -31,6 +31,10 @@ function showToDo(){
         const todoItem = document.createElement("li");
         todoItem.setAttribute('class','todos_item');
         todoItem.innerText = item;
+        const btn =document.createElement("button");
+        btn.setAttribute('type','button');
+        btn.innerText = '完了';
+        todoItem.appendChild(btn);
         todoList[0].appendChild(todoItem);
     }
 }
